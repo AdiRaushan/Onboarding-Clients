@@ -51,7 +51,8 @@
 
         /* ─── PAGE SHELL ─── */
         .page {
-            width: 794px;
+            width: 100%;
+            max-width: 794px;
             min-height: 1123px;
             background: var(--dark);
             position: relative;
@@ -819,6 +820,100 @@
             letter-spacing: 0.15em;
             text-transform: uppercase;
             border-radius: 2px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 12px;
+            }
+
+            .page {
+                min-height: auto;
+                margin-bottom: 24px;
+            }
+
+            .page-header-strip, 
+            .page-footer-strip {
+                padding: 16px 20px;
+            }
+
+            .cover-top-band {
+                padding: 40px 24px 32px;
+            }
+
+            .cover-headline {
+                font-size: 36px;
+            }
+
+            .cover-mid, 
+            .content-body {
+                padding: 24px;
+                gap: 32px;
+            }
+
+            .cover-meta-row, 
+            .cover-scope-grid, 
+            .services-grid, 
+            .pricing-block, 
+            .two-col, 
+            .signoff {
+                grid-template-columns: 1fr;
+            }
+
+            .meta-cell {
+                border-right: none;
+                border-bottom: 1px solid var(--rule);
+            }
+
+            .meta-cell:last-child {
+                border-bottom: none;
+            }
+
+            .price-amount {
+                font-size: 48px;
+            }
+
+            .cta-strip {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+                padding: 24px;
+            }
+
+            .cta-badge {
+                width: 100%;
+                text-align: center;
+            }
+
+            .sign-party {
+                padding: 20px;
+            }
+
+            .sign-date-box {
+                position: static;
+                margin-bottom: 12px;
+                display: block;
+            }
+
+            .timeline::before {
+                left: 19px;
+            }
+
+            .tl-item {
+                gap: 20px;
+            }
+
+            .tl-node {
+                margin-left: 6px;
+            }
+            
+            .page-footer-strip span {
+                display: none;
+            }
+            
+            .page-footer-strip .pg-num {
+                margin: 0 auto;
+            }
         }
 
         @media print {
